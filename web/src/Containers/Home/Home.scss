@@ -1,0 +1,79 @@
+@import '../../Scss/Mixins';
+@import '../../Scss/Variables';
+
+.homeContainer {
+  img {
+    width: 100%;
+  }
+  
+  .homeHero {
+    .heroWrapper {
+      background: $background-secondary;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 150px 0px 100px 0px;
+      z-index: $index-low;
+  
+      h3 { color: $text-secondary; }
+  
+      .heroImages {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+  
+        img { position: absolute; }
+  
+        #heroTopImg {
+          animation: hover-cardspec 2s infinite ease-in-out alternate;
+        }
+  
+        @media #{$tablet-down} { display: none; }
+      }
+  
+      @media #{$normal} {
+        @for $i from 1 through 15 {
+          div:nth-child(#{$i}) { @include drop-in-animation(0.5 + $i * 0.1s); }
+        }
+      }
+    }
+
+    #mixedWaveSeperator {
+      width: 100%;
+    }
+  }
+
+  .homeOfferings {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5rem;
+
+    .offeringsWrapper {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+
+      span {
+        max-width: 20%;
+        padding: 1rem;
+
+        img {
+          width: 80%;
+        }
+      }
+    }
+
+    a {
+      @include button-hovered;
+      padding: 12px 100px !important;
+      background-color: $background;
+    }
+  }
+}

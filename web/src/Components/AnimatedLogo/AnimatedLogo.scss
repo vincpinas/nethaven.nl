@@ -1,0 +1,27 @@
+@import '../../Scss/Variables';
+
+#NethavenLogo {
+  #Logo {
+    @keyframes logo-animation {
+      from { transform: translateY(0px) }
+      to { transform: translateY(-2px) }
+    }
+  
+    #rightVector { animation: logo-animation 1.5s ease-in-out 0.3s infinite alternate-reverse; }
+    #leftVector { animation: logo-animation 1.5s ease-in-out 0s infinite alternate;  }
+  }
+  #Title {
+    @for $i from 1 through 10 {
+      path:nth-child(#{$i}) {
+        @keyframes title-animation {
+          0% { fill: black; }
+          98% { fill: black; }
+          99% { fill: $special-secondary; }
+          100% { fill: black; }
+        }
+
+        animation: title-animation 25s #{$i*50}ms ease-in-out infinite; 
+      }
+    }
+  }
+}

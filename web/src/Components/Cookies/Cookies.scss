@@ -1,0 +1,32 @@
+@import '../../Scss/Variables';
+@import '../../Scss/Mixins';
+
+.cookiesNotice {
+  position: fixed;
+  bottom: 15px;
+  left: 15px;
+  padding: 20px;
+  max-width: 350px;
+  background-color: $color-white;
+  display: flex;
+  flex-direction: column;
+  border-radius: $border-radius--primary;
+  box-shadow: $box-shadow--secondary;
+  z-index: $index-3;
+
+  span {
+    @include paragraph;
+
+    a {
+      color: $special-secondary;
+      text-decoration: underline
+    }
+  }
+
+  button {
+    @include button-hovered;
+    padding: 4px 18px;
+  }
+
+  @include slide-in-left-ani(1.2s);
+}

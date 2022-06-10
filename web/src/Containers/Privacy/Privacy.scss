@@ -1,0 +1,25 @@
+@import '../../Scss/Variables';
+
+#privacyContainer {
+  padding: 40px 200px;
+
+  @media #{$tablet-down} {
+    padding: 40px 50px;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  p {
+    margin-bottom: 2.5rem;
+
+    @media #{$mobile-down} {
+      margin-bottom: 1rem;
+    }
+  }
+
+  a {
+    color: $special-secondary;
+  }
+}

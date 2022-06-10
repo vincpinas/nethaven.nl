@@ -1,0 +1,172 @@
+@import '../../Scss/Variables';
+@import '../../Scss/Mixins';
+
+#contactContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+
+  .contactHeading {
+    color: $text-secondary;
+    font-weight: 500;
+    margin-bottom: 5rem;
+  }
+
+  #contactFormWrapper {
+    display: flex;
+    background-color: $background-secondary;
+    border-radius: 20px;
+    box-shadow: $box-shadow--secondary;
+
+    .contactInfo {
+      color: $color-white;
+      background-color: $special-primary;
+      border-radius: inherit;
+      text-align: left;
+      padding: 60px 30px;
+
+      h3 {
+        color: $color-white;
+        font-weight: 700;
+      }
+
+      ul {
+        margin-top: 2.5rem;
+
+        li {
+          margin: 1rem 0 1rem 0;
+          transition: all 300ms;
+          border: solid 2px $special-primary;
+          padding: 8px;
+          width: fit-content;
+          border-radius: 8px;
+
+          a {
+            @include font--primary(300);
+            color: $color-white;
+
+            svg {
+              margin-right: 1rem;
+            }
+          }
+
+          &:hover {
+            border: solid 2px $special-secondary;
+          }
+        }
+      }
+    }
+
+    #contactForm {
+      background-color: $background-secondary;
+      border-radius: inherit;
+      padding: 40px 30px;
+      display: flex;
+      flex-direction: column;
+      @include font--primary(700);
+      
+
+      .inputRow {
+        display: flex;
+
+        .iF-label {
+          color: $special-primary;
+        }
+
+        .iFe-label {
+          color: $color-black;
+        }
+
+        .iFerr-label {
+          color: $color-red;
+        }
+
+        label {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          text-align: left;
+          color: $text-light;
+          @include label;
+
+          &:first-child {
+            margin-right: 6.5rem;
+          }
+          
+
+          input {
+            background: none;
+            margin-top: 0.5rem;
+            border: none;
+            border-bottom: 2px solid $text-light;
+            @include input;
+            padding: 3px;
+            outline: none;
+            caret-color: $text-light;
+
+            &:focus {
+              border-bottom: 2px solid $special-primary;
+            }
+          }
+
+          .iFerr-input {
+            border-bottom: 2px solid $color-red !important;
+
+            &::placeholder {
+              color: $color-red;
+            }
+  
+            &:focus {
+              border-bottom: 2px solid $color-red !important;
+            }
+          }
+        }
+      }
+
+      div {
+        text-align: left;
+        width: 100%;
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+
+        h4 {
+          font-weight: 700;
+          margin-bottom: 0;
+        }
+
+        label{
+          font-weight: 400;
+          margin-right: 3.5rem;
+
+          input {
+            margin-right: 0.5rem;
+            border: none;
+            color: $special-primary;
+          }
+        }
+      }
+
+      button {
+        margin-left: auto;
+        padding: 8px 20px;
+        background-color: $special-primary;
+        border: 2px solid $special-primary;
+        transition: all 500ms;
+        color: $color-white;
+        box-shadow: $box-shadow--secondary;
+        font-weight: 500;
+        border-radius: 10px;
+      }
+
+      #messageRow {
+        label {
+          margin: 0 0 1rem 0;
+        }
+      }
+    }
+  }
+}

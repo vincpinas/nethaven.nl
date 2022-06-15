@@ -17,11 +17,11 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* <Route path="/work" element={null} />
+        <Route path="/work" element={null} />
         <Route path="/approach" element={null} />
-        <Route path="/about-us" element={null} /> */}
+        <Route path="/about-us" element={null} />
         <Route path="/contact" element={<Contact />} />
-        {/* <Route path="/vacancies" element={null} /> */}
+        <Route path="/vacancies" element={null} />
         <Route path='/privacy' element={<Privacy />} />
       </Routes>
       <Footer />

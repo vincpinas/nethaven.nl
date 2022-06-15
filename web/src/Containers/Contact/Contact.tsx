@@ -14,7 +14,7 @@ function Contact() {
           <p>Vul het contact formulier in en ons team zal <br /> zo snel mogelijk op u terug komen!</p>
           <ul>
             <li>
-              <a href="tel:+31 (0)641509165" target='_blank' rel='noreferrer'>
+              <a href="tel:+31 (0)641509165" rel='noreferrer'>
                 <FA.FaPhoneAlt />
                 +31 (0) 641509165
               </a>

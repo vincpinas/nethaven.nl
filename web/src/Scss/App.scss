@@ -71,13 +71,6 @@ body, html, #root {
         }
     }
 
-    .tabletDown {
-        display: none;
-        @media #{$tablet-down} {
-            display: initial;
-        }
-    }
-
     .specialColor {
         color: $special-primary;
     }

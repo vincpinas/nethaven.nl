@@ -45,6 +45,7 @@ footer {
 
     #footerLogo {
       margin-left: auto;
+      @media #{$tablet-down} { display: none; }
     }
   }
 }

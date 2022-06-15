@@ -20,7 +20,8 @@
           100% { fill: black; }
         }
 
-        animation: title-animation 25s #{$i*50}ms ease-in-out infinite; 
+        // Give it 2ms per letter for a smooth animation (basically double the duration and turn it to ms)
+        animation: title-animation 13s #{$i*26}ms ease-in-out infinite; 
       }
     }
   }

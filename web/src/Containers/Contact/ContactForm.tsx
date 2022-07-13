@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import CustomRadio from '../../Components/CustomRadio/CustomRadio';
 import { useFormik } from 'formik'
 import * as Yup from 'yup';
 
@@ -13,6 +14,7 @@ function ContactForm() {
     const parent = e.target.parentElement;
     parent.classList.remove('iF-label'); parent.classList.remove('iFe-label');
   }
+  const [selected, setSelected] = useState("rebranding");
 
   const formik = useFormik({
     initialValues: {
@@ -21,6 +23,7 @@ function ContactForm() {
       email: '',
       phone: '',
       message: '',
+      q_type: '',
     },
     validationSchema: Yup.object().shape({
       firstname: Yup.string().required('Voornaam is verplicht'),
@@ -44,6 +47,10 @@ function ContactForm() {
     formik.handleChange(e);
     lAF(e);
   }
+
+  useEffect(() => {
+    formik.values.q_type = selected
+  }, [selected, formik.values])
 
   return (
     <form id='contactForm' onSubmit={formik.handleSubmit}>
@@ -93,20 +100,11 @@ function ContactForm() {
       </span>
       <div>
         <h4>Waar gaat uw vraag over?</h4>
-        <span>
-          <label>
-            <input type='radio' name='q_type' id='rebranding' value='rebranding' defaultChecked />
-            Rebranding
-          </label>
-          <label>
-            <input type='radio' name='q_type' id='webdesign' value='webdesign' />
-            Web Design
-          </label>
-          <label>
-            <input type='radio' name='q_type' id='other' value='other' />
-            Anders
-          </label>
-        </span>
+        <div className='customRadioContainer'>
+          <CustomRadio text="Rebranding" onChange={setSelected} selected={selected} value="rebranding" id="rebranding" />
+          <CustomRadio text="Web Design" onChange={setSelected} selected={selected} value="webdesign" id="webdesign" />
+          <CustomRadio text="Anders" onChange={setSelected} selected={selected} value="other" id="other" />
+        </div>
       </div>
       <span className='inputRow' id='messageRow'>
         <label htmlFor='message' className={formik.errors.message ? 'iFerr-label' : ''}>

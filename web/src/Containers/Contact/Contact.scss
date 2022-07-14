@@ -19,7 +19,7 @@
   #contactFormWrapper {
     display: flex;
     background-color: $background-secondary;
-    border-radius: 20px;
+    border-radius: $border-radius--secondary;
     box-shadow: $box-shadow--secondary;
 
     @media #{$tablet-down} {
@@ -55,7 +55,7 @@
           border: solid 2px $special-primary;
           padding: 8px;
           width: fit-content;
-          border-radius: 8px;
+          border-radius: $border-radius--primary;
 
           a {
             @include font--primary(300);
@@ -184,7 +184,7 @@
         color: $color-white;
         box-shadow: $box-shadow--secondary;
         font-weight: 500;
-        border-radius: 10px;
+        border-radius: $border-radius--primary;
       }
 
       #messageRow {

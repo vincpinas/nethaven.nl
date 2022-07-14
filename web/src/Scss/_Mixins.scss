@@ -20,7 +20,7 @@
   text-decoration: none;
   font-weight: 600;
   font-size: $font-size--button;
-  border-radius: 10px;
+  border-radius: $border-radius--primary;
   background: none;
   filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.3));
 }

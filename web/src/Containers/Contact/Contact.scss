@@ -36,7 +36,7 @@
 
       @for $i from 1 through 5 {
         *:nth-child(#{$i}) {
-          @include drop-in-animation(0.5 + $i * 0.1s);
+          @include drop-in-animation($i * 0.1s);
         }
       }
 
@@ -111,7 +111,7 @@
 
           @for $i from 1 through 5 {
             &:nth-child(#{$i}) {
-              @include drop-in-animation(0.75 + $i * 0.1s);
+              @include drop-in-animation(0.5 + $i * 0.1s);
             }
           }
 
@@ -158,7 +158,7 @@
         h4 {
           font-weight: 700;
           margin-bottom: 0;
-          @include drop-in-animation(0.8 + 0.1s);
+          @include drop-in-animation(0.65 + 0.1s);
         }
 
         .customRadioContainer {
@@ -169,7 +169,7 @@
 
           @for $i from 1 through 5 {
             span:nth-child(#{$i}) {
-              @include drop-in-animation(0.9 + $i * 0.1s);
+              @include drop-in-animation(0.75 + $i * 0.1s);
             }
           }
         }
@@ -189,7 +189,7 @@
 
       #messageRow {
         label {
-          @include drop-in-animation(1 + 0.1s);
+          @include drop-in-animation(0.9 + 0.1s);
           margin: 0 0 1rem 0;
         }
       }

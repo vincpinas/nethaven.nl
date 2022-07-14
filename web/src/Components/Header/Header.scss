@@ -1,39 +1,53 @@
 @import '../../Scss/Mixins';
 @import '../../Scss/Variables';
 
-#cHeader {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
-  padding: $base-margin 140px $base-margin 140px;
-  @include drop-in-animation(0.1s);
+#headerContainer {
 
-  #headerLogo {
-    @include drop-in-animation(0.3s);
-    svg { width: 171px; }
-
-    @media #{$mobile-down} {
-      svg { width: 125px; }
-    }
-  }
-
-  .headerLinkWrapper {
+  #cHeader {
+    position: relative;
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    padding: $base-margin 140px $base-margin 140px;
+    @include drop-in-animation(0.1s);
 
-    @for $i from 1 through 5 {
-      *:nth-child(#{$i}) {
-        @include drop-in-animation(0.5 + $i * 0.1s);
-        @include font--primary(700);
-        margin: 0px $base-margin 0px 0px;
-        color: $text-primary;
+    #headerLogo {
+      @include drop-in-animation(0.3s);
+
+      svg {
+        width: 171px;
+      }
+
+      @media #{$mobile-down} {
+        svg {
+          width: 125px;
+        }
       }
     }
 
-    @media #{$tablet-down} {
-      display: none;
+    .headerLinkWrapper {
+      display: flex;
+      flex-direction: row;
+
+      @for $i from 1 through 5 {
+        *:nth-child(#{$i}) {
+          @include drop-in-animation(0.5 + $i * 0.1s);
+          @include font--primary(700);
+          margin: 0px $base-margin 0px 0px;
+          color: $text-primary;
+        }
+      }
+
+      @media #{$tablet-down} {
+        display: none;
+      }
+    }
+
+
+    @media #{$mobile-down} {
+      padding: $base-margin;
     }
   }
 
@@ -91,9 +105,5 @@
       @include button-hovered;
       padding: 17px 110px;
     }
-  }
-
-  @media #{$mobile-down} {
-    padding: $base-margin;
   }
 }

@@ -34,6 +34,12 @@
       text-align: left;
       padding: 60px 30px;
 
+      @for $i from 1 through 5 {
+        *:nth-child(#{$i}) {
+          @include drop-in-animation(0.5 + $i * 0.1s);
+        }
+      }
+
       h3 {
         color: $color-white;
         font-weight: 700;
@@ -41,6 +47,7 @@
 
       ul {
         margin-top: 2.5rem;
+
 
         li {
           margin: 1rem 0 1rem 0;
@@ -73,7 +80,6 @@
       display: flex;
       flex-direction: column;
       @include font--primary(700);
-      
 
       .inputRow {
         display: flex;
@@ -102,7 +108,12 @@
           text-align: left;
           color: $text-light;
           @include label;
-          
+
+          @for $i from 1 through 5 {
+            &:nth-child(#{$i}) {
+              @include drop-in-animation(0.75 + $i * 0.1s);
+            }
+          }
 
           &:first-child {
             margin-right: 6.5rem;
@@ -147,6 +158,7 @@
         h4 {
           font-weight: 700;
           margin-bottom: 0;
+          @include drop-in-animation(0.8 + 0.1s);
         }
 
         .customRadioContainer {
@@ -154,6 +166,12 @@
           flex-direction: row;
           align-items: flex-start;
           flex-wrap: wrap;
+
+          @for $i from 1 through 5 {
+            span:nth-child(#{$i}) {
+              @include drop-in-animation(0.9 + $i * 0.1s);
+            }
+          }
         }
       }
 
@@ -171,6 +189,7 @@
 
       #messageRow {
         label {
+          @include drop-in-animation(1 + 0.1s);
           margin: 0 0 1rem 0;
         }
       }

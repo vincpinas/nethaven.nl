@@ -10,7 +10,7 @@ function Header() {
   const overlaySetter = () => setOverlay(!overlay);
 
   return (
-    <header id='cHeader'>
+    <div id='headerContainer'>
       <div className={overlay ? 'menuOverlay active' : 'menuOverlay'}>
         <span><Go.GoThreeBars className='hamMenu' onClick={overlaySetter} /></span>
         <ul>
@@ -22,16 +22,18 @@ function Header() {
           <Link to='/vacancies' onClick={overlaySetter}>Vacatures</Link>
         </ul>
       </div>
-      <Link to='/' id='headerLogo'><AnimatedLogo /></Link>
-      <div className='headerLinkWrapper'>
-        <Link to='/work'>Werk</Link>
-        <Link to='/approach'>Aanpak</Link>
-        <Link to='/about-us'>Over Ons</Link>
-        <Link to='/contact'>Contact</Link>
-        <Link to='/vacancies'>Vacatures</Link>
-      </div>
-      <Go.GoThreeBars className='hamMenu' onClick={overlaySetter} />
-    </header>
+      <header id='cHeader'>
+        <Link to='/' id='headerLogo'><AnimatedLogo /></Link>
+        <div className='headerLinkWrapper'>
+          <Link to='/work'>Werk</Link>
+          <Link to='/approach'>Aanpak</Link>
+          <Link to='/about-us'>Over Ons</Link>
+          <Link to='/contact'>Contact</Link>
+          <Link to='/vacancies'>Vacatures</Link>
+        </div>
+        <Go.GoThreeBars className='hamMenu' onClick={overlaySetter} />
+      </header>
+    </div>
   )
 }
 

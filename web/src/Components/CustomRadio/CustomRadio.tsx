@@ -21,7 +21,7 @@ function CustomRadio({ text, onChange, selected, value, id }: CRProps) {
   };
 
   return (
-    <div
+    <span
       className="modern-radio-container"
       onClick={ex}
       id={id}
@@ -32,7 +32,7 @@ function CustomRadio({ text, onChange, selected, value, id }: CRProps) {
       <div className={`helper-text ${value !== selected && "unselected"}`}>
         {text}
       </div>
-    </div>
+    </span>
   );
 }
 

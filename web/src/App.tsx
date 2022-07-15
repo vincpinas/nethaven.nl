@@ -1,4 +1,5 @@
 import React from 'react';
+import './Scss/App.scss';
 import { Routes, Route } from 'react-router-dom';
 import Helmet from './Components/Helmet/Helmet';
 import CookiesNotice from './Components/Cookies/Cookies';
@@ -6,8 +7,8 @@ import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
 import Home from './Containers/Home/Home';
 import Privacy from './Containers/Privacy/Privacy';
-import './Scss/App.scss';
 import Contact from './Containers/Contact/Contact';
+import Vacancies from './Containers/Vacancies/Vacancies';
 
 function App() {
   return (
@@ -17,11 +18,11 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/work" element={null} />
-        <Route path="/approach" element={null} />
-        <Route path="/about-us" element={null} />
+        <Route path="/werk" element={null} />
+        <Route path="/aanpak" element={null} />
+        <Route path="/over-ons" element={null} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/vacancies" element={null} />
+        <Route path="/vacatures" element={<Vacancies />} />
         <Route path='/privacy' element={<Privacy />} />
       </Routes>
       <Footer />

@@ -15,21 +15,21 @@ function Header() {
         <span><Go.GoThreeBars className='hamMenu' onClick={overlaySetter} /></span>
         <ul>
           <Link to='/' onClick={overlaySetter}>Home</Link>
-          <Link to='/work' onClick={overlaySetter}>Werk</Link>
-          <Link to='/approach' onClick={overlaySetter}>Aanpak</Link>
-          <Link to='/about-us' onClick={overlaySetter}>Over Ons</Link>
+          <Link to='/werk' onClick={overlaySetter}>Werk</Link>
+          <Link to='/aanpak' onClick={overlaySetter}>Aanpak</Link>
+          <Link to='/over-ons' onClick={overlaySetter}>Over Ons</Link>
           <Link to='/contact' onClick={overlaySetter}>Contact</Link>
-          <Link to='/vacancies' onClick={overlaySetter}>Vacatures</Link>
+          <Link to='/vacatures' onClick={overlaySetter}>Vacatures</Link>
         </ul>
       </div>
       <header id='cHeader'>
         <Link to='/' id='headerLogo'><AnimatedLogo /></Link>
         <div className='headerLinkWrapper'>
-          <Link to='/work'>Werk</Link>
-          <Link to='/approach'>Aanpak</Link>
-          <Link to='/about-us'>Over Ons</Link>
+          <Link to='/werk'>Werk</Link>
+          <Link to='/aanpak'>Aanpak</Link>
+          <Link to='/over-ons'>Over Ons</Link>
           <Link to='/contact'>Contact</Link>
-          <Link to='/vacancies'>Vacatures</Link>
+          <Link to='/vacatures'>Vacatures</Link>
         </div>
         <Go.GoThreeBars className='hamMenu' onClick={overlaySetter} />
       </header>

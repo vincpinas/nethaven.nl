@@ -1,0 +1,57 @@
+@import '../../Scss/Variables';
+@import '../../Scss/Mixins';
+
+#vacanciesContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+
+  .vacanciesHeading {
+    color: $text-secondary;
+    font-weight: 500;
+    margin-bottom: 5rem;
+    max-width: 60rem;
+  }
+
+  .openVacanciesHeading {
+    font-weight: 800;
+    margin-bottom: 3rem;
+  }
+
+  ul {
+    li {
+      &:not(:last-of-type) {
+        margin-bottom: 1rem;
+      }
+
+      a {
+        display: flex;
+        @include button-hovered;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 12px 10px;
+        min-width: 30rem;
+
+        h5 {
+          font-weight: 800 !important;
+          @include paragraph;
+          line-height: 18px;
+          margin: 0;
+        }
+
+        span {
+          margin-left: auto;
+          margin-right: 2rem;
+        }
+
+        @media #{$tablet-down} {
+          min-width: 15rem;
+        }
+      }
+    }
+  }
+}

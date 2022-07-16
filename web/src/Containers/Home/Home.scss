@@ -85,6 +85,18 @@
         max-width: 20rem;
         padding: 1rem;
 
+        h3 {
+          a {
+            color: $text-primary;
+            cursor: pointer;
+            transition: $transition-fast;
+
+            &:hover {
+              color: $special-primary;
+            }
+          }
+        }
+
         @media #{$tablet-down} {
           max-width: 80%;
         }
@@ -99,7 +111,7 @@
       }
     }
 
-    a {
+    .contactButton {
       @include button-hovered;
       padding: 12px 100px !important;
       background-color: $background;

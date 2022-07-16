@@ -15,11 +15,11 @@ function Home() {
       <section className='homeHero'>
         <div className='heroWrapper'>
           <div className='heroText'>
-            <h1 className='deskOnly'>Wij zijn de <RotatingWords wordsList={['moderne', 'lokale', 'goedkoopste']} duration={5} /> <br/> solutie.</h1>
+            <h1 className='deskOnly'>Wij zijn de <RotatingWords wordsList={['moderne', 'lokale', 'goedkoopste']} duration={5} /> <br /> solutie.</h1>
             <h1 className='tabletDown'>Wij zijn de <span className='specialColor'>moderne</span> solutie.</h1>
-            <h3>Bouw samen met ons naar een nieuwe toekomst. <br/>
-                Wij helpen jou bedrijf <br/>
-                een nieuwe online identiteit te vormen.
+            <h3>Bouw samen met ons naar een nieuwe toekomst. <br />
+              Wij helpen jou bedrijf <br />
+              een nieuwe online identiteit te vormen.
             </h3>
           </div>
           <div className='heroImages'>
@@ -33,22 +33,22 @@ function Home() {
         <h2>Wat hebben wij te bieden?</h2>
         <div className='offeringsWrapper'>
           <span className='offering'>
-            <h3>Rebranding</h3>
+            <h3><Link to="/aanpak#rebranding">Rebranding</Link></h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore .</p>
             <img src={swave1} alt="" />
           </span>
           <span className='offering'>
-            <h3>Marketing</h3>
+            <h3><Link to="/aanpak#marketing">Marketing</Link></h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
             <img src={swave2} alt="" />
           </span>
           <span className='offering'>
-            <h3>Onderhoud</h3>
+            <h3><Link to="/aanpak#onderhoud">Onderhoud</Link></h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore .</p>
             <img src={swave1} alt="" />
           </span>
         </div>
-        <Link to='/contact'>Neem contact op</Link>
+        <Link to='/contact' className='contactButton'>Neem contact op</Link>
       </section>
     </div>
   )

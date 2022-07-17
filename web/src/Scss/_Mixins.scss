@@ -83,6 +83,18 @@
   }
 }
 
+@mixin h5 {
+  @include font-size($font-size--h5);
+  @include font--primary();
+  line-height: #{$line-height--h5}px;
+  margin-bottom: 1.5rem;
+
+  @media #{$tablet-down} {
+    @include font-size($s-font-size--h5);
+    line-height: #{$s-line-height--h5}px;
+  }
+}
+
 @mixin paragraph {
   @include font-size($font-size--paragraph);
   @include font--primary();

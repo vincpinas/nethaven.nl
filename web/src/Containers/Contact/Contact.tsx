@@ -4,6 +4,20 @@ import ContactForm from './ContactForm';
 import './Contact.scss';
 
 function Contact() {
+  function randomInt(min = 0, max = 100) {
+    let difference = max - min;
+    let rand = Math.random();
+    rand = Math.floor( rand * difference);
+    rand = rand + min;
+    return rand;
+  }
+
+  const phoneNumber = randomInt(100000000, 900000000);
+  const homeNumber = randomInt(1, 100);
+  const postCode = randomInt(1000, 5000);
+
+
+
   return (
     <div id='contactContainer'>
       <h1>Contact Ons</h1>
@@ -14,9 +28,9 @@ function Contact() {
           <p>Vul het contact formulier in en ons team zal <br /> zo snel mogelijk op u terug komen!</p>
           <ul>
             <li>
-              <a href="tel:+31 (0)641509165" rel='noreferrer'>
+              <a href={`tel:+31 (0)${phoneNumber}`} rel='noreferrer'>
                 <FA.FaPhoneAlt />
-                +31 (0) 641509165
+                +31 (0) {phoneNumber}
               </a>
             </li>
             <li>
@@ -28,7 +42,7 @@ function Contact() {
             <li>
               <a href="https://www.google.nl/maps" target='_blank' rel='noreferrer'>
                 <FA.FaCompass />
-                Coudehovenflat 81, 1167 VK Uithoorn
+                Randomflat {homeNumber}, {postCode} VK Uithoorn
               </a>
             </li>
           </ul>

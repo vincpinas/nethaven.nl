@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 import './Vacancies.scss';
 
 function Vacancies() {
-  const vacancies: any[]|[] = [
-    { slug: 'front-end-developer', name: 'Front-end developer', exp: 2 },
-    { slug: 'stagair-webdesign', name: 'Stagair Webdesign', exp: 0 },
-    { slug: 'stagair-back-end-developer', name: 'Stagair Back-end developer', exp: 0 },
+  const vacancies: any[] | [] = [
+    { slug: 'front-end-developer', name: 'Front-end developer', exp: 2, time: 'Fulltime' },
+    { slug: 'stagair-webdesign', name: 'Stagair Webdesign', exp: 0, time: 'Stagair' },
+    { slug: 'stagair-back-end-developer', name: 'Stagair Back-end developer', exp: 0, time: 'Stagair' },
   ]
 
   return (
@@ -25,7 +25,10 @@ function Vacancies() {
             return (
               <li key={`vacancy-${Math.random()}`}>
                 <Link to={`/vacatures/${vacancy.slug}`}>
-                  <h5>{vacancy.name}</h5>
+                  <div>
+                    <h5>{vacancy.name}</h5>
+                    <span>{vacancy.time}</span>
+                  </div>
                   <span>{vacancy.exp} jaar erv.</span>
                 </Link>
               </li>
